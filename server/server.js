@@ -23,7 +23,7 @@ app.get(['/message', '/api/message'], (req, res) => {
 // Serve static files from React in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../client/dist'));
-  app.get('*/splat', (req, res) => {
+  app.all('/{*any}', (req, res) => {
     res.sendFile(path.resolve('../client/dist/index.html'));
   });
 }
