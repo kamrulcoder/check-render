@@ -11,9 +11,3 @@ services:
         fromDatabase:
           name: mern-db
           property: connectionString
-    healthCheckPath: /api/health
-databases:
-  - name: mern-db
-    databaseName: mern
-    user: mernuser
-    plan: free
